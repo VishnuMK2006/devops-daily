@@ -1,4 +1,0 @@
-OS Version: Ubuntu 24.04.3 LTS
-Day 1:
-Basic linux file management cmd's
-git setup and it's cmd's
