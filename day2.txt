@@ -1,0 +1,4 @@
+Day 2 objective:
+    -Virtual machine and VS code connection using SSH(fr Documentation -> word Document)
+    -Docker setup
+    -learn branching , merging in Github
