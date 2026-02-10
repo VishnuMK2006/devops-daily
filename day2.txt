@@ -2,3 +2,9 @@ Day 2 objective:
     -Virtual machine and VS code connection using SSH(fr Documentation -> word Document)
     -Docker setup
     -learn branching , merging in Github
+
+CN concept
+ipv4
+192.168.10.128 (Every numbers are octet)
+
+0-255-> 0 is for base address, 255 for bordcast value.
