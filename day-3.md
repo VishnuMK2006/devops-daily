@@ -110,3 +110,112 @@ docker stop mynginx
 docker rm mynginx
 ```
 
+Nice workflow notes 👍
+Let’s add a clean **“Afternoon Session – Jenkins Installation & Setup”** section.
+
+---
+
+# AFTERNOON SESSION — JENKINS INSTALLATION
+
+
+## 1️ Update system
+
+```bash
+sudo apt update
+sudo apt upgrade -y
+```
+
+---
+
+##  2️ Install Java (Jenkins requirement)
+
+Check if Java exists:
+
+```bash
+java -version
+```
+
+If not installed:
+
+```bash
+sudo apt install openjdk-17-jdk -y
+```
+
+Verify:
+
+```bash
+java -version
+```
+
+---
+
+##  3️ Add Jenkins repository key
+
+```bash
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+```
+
+---
+
+## 4️ Add Jenkins repository
+
+```bash
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+```
+
+---
+
+## 5️ Install Jenkins
+
+```bash
+sudo apt update
+sudo apt install jenkins -y
+```
+
+---
+
+## 6️ Start Jenkins
+
+```bash
+sudo systemctl start jenkins
+```
+
+Enable at boot:
+
+```bash
+sudo systemctl enable jenkins
+```
+
+Check status:
+
+```bash
+sudo systemctl status jenkins
+```
+
+---
+
+##  7 Open Jenkins in browser
+
+Default port:
+
+```
+http://localhost:8080
+```
+
+## 🔹 Allow firewall (if enabled)
+
+```bash
+sudo ufw allow 8080
+sudo ufw reload
+```
+
+---
+
+## 🔹 Restart Jenkins
+
+```bash
+sudo systemctl restart jenkins
+```
